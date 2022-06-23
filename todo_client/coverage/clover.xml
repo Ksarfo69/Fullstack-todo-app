@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1656025823413" clover="3.2.0">
+  <project timestamp="1656025823414" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4" elements="16" coveredelements="16" complexity="0" loc="12" ncloc="12" packages="1" files="4" classes="4"/>
+    <file name="AddTodoSpinner.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Components\AddTodoSpinner.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+    <file name="DeleteSpinner.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Components\DeleteSpinner.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+    <file name="DisplayTodoSpinner.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Components\DisplayTodoSpinner.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+    <file name="StatusSpinner.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Components\StatusSpinner.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

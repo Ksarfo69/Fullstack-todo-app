@@ -17,8 +17,8 @@ height: 5px;
 
 const Spinnerpage = () => {
     return (
-        <Container>
-        <Spinner animation="border" role="status">
+        <Container data-testid="container">
+        <Spinner data-testid="child" animation="border" role="status">
   <span className="visually-hidden">Loading...</span>
 </Spinner>
 </Container>
