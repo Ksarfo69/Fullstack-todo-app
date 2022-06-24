@@ -4,6 +4,7 @@ import {Container, Left, LeftText, Right, RightWrapper, LoginText, EmailField, E
 import { useDispatch, useSelector } from 'react-redux'
 import {loginStart, loginSuccess, loginError} from '../Redux/usersSlice'
 import RegisterPage from './registerPage'
+import axios from 'axios'
 
 
 const LoginPage = () => {
@@ -38,7 +39,6 @@ const LoginPage = () => {
             try{
                 const res = await axiosInstance.post('/login', userDetails)
                 dispatch(loginSuccess(res.data))
-                const results = await axiosInstance.get('/getusertodolist/6');
             
             }catch{
                 dispatch(loginError())
@@ -51,9 +51,8 @@ const LoginPage = () => {
         setshowRegistrationForm(true)  
     }
 
-
   return (
-    <Container> 
+    <Container data-testid="container"> 
         <Left>
            <LeftText>
               <em>The TodoApp</em> 
@@ -65,24 +64,24 @@ const LoginPage = () => {
            <RightWrapper> 
            <LoginText>TodoApp Login</LoginText>
 
-            {user.authError && <AuthError>Incorrect Email or password.</AuthError>}
-            {EmptyPassword && <AuthError>Please enter a password.</AuthError>}
+            <AuthError data-testid="autherror" style={{visibility: user.authError? "visible" : "hidden"}}>Incorrect Email or password.</AuthError>
+            <AuthError data-testid="emptypassword" style={{visibility: EmptyPassword? "visible" : "hidden"}} >Please enter a password.</AuthError>
            
             <EmailField >
                 Email:
-                <EmailInput  onChange={emailHandler} value={Email}>
+                <EmailInput data-testid="email" type="email" onChange={emailHandler} value={Email}>
 
                 </EmailInput>
             </EmailField>
             <PasswordField >
                 Password:
-                <PasswordInput type="password" onChange={passwordHandler} value={Password}>
+                <PasswordInput data-testid="password" type="password" onChange={passwordHandler} value={Password}>
 
                 </PasswordInput>
             </PasswordField>
            
-            <LoginButton onClick={loginHandler}>Login</LoginButton>
-            <CreateAccountButton onClick={createAccountHandler}>Create Account</CreateAccountButton>
+            <LoginButton data-testid="login" onClick={loginHandler}>Login</LoginButton>
+            <CreateAccountButton data-testid="create-account" onClick={createAccountHandler}>Create Account</CreateAccountButton>
             </RightWrapper>
             }
             
