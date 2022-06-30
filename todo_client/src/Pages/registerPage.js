@@ -100,7 +100,7 @@ const RegisterPage = (props) => {
 
   return (
       <div>
-    <Container> 
+    <Container data-testid="container"> 
         <Wrapper>
             <RegistrationText>TodoApp Registration</RegistrationText>
 
