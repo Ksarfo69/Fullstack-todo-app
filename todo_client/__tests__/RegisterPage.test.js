@@ -116,4 +116,105 @@ describe('Registration Page', ()=> {
     
             expect(confirmpasswordInput.value).toBe(testconfirmpassword)
         })
+
+    
+    it("checks empty username input error is visible", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+
+            const createAccountButton = screen.getByTestId("createAccountButton")
+            const emptyUsernameError = screen.getByTestId("emptyUsernameError")
+
+            fireEvent.click(createAccountButton)
+    
+            expect(emptyUsernameError).toBeVisible();
+        })
+
+
+    it("checks empty password input error is visible", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+
+            const usernameInput = screen.getByTestId("usernameInput")
+            const testusername = "testname50"
+
+            fireEvent.change(usernameInput, {target: {value: testusername}})
+
+    
+            const createAccountButton = screen.getByTestId("createAccountButton")
+            const emptyPasswordError = screen.getByTestId("emptyPasswordError")
+
+            fireEvent.click(createAccountButton)
+
+            expect(emptyPasswordError).toBeVisible();
+        })
+
+
+    it("checks empty email input error is visible", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+    
+            const usernameInput = screen.getByTestId("usernameInput")
+            const testusername = "testname50"
+
+            fireEvent.change(usernameInput, {target: {value: testusername}})
+
+            const passwordInput = screen.getByTestId("passwordInput")
+            const testpassword = "testpassword1111"
+
+            fireEvent.change(passwordInput, {target: {value: testpassword}})
+    
+            const createAccountButton = screen.getByTestId("createAccountButton")
+            const emptyEmailError = screen.getByTestId("emptyEmailError")
+
+            fireEvent.click(createAccountButton)
+
+            expect(emptyEmailError).toBeVisible();
+        })
+
+    it("checks password match error is visible", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+
+            const usernameInput = screen.getByTestId("usernameInput")
+            const testusername = "testname50"
+
+            fireEvent.change(usernameInput, {target: {value: testusername}})
+
+
+            const emailInput = screen.getByTestId("emailInput")
+            const testemail = "testname50@gmail.com"
+
+            fireEvent.change(emailInput, {target: {value: testemail}})
+
+
+            const passwordInput = screen.getByTestId("passwordInput")
+            const testpassword = "testpassword1111"
+
+            fireEvent.change(passwordInput, {target: {value: testpassword}})
+
+
+            const confirmpasswordInput = screen.getByTestId("confirmpasswordInput")
+            const testconfirmpassword = "testpassword"
+
+            fireEvent.change(confirmpasswordInput, {target: {value: testconfirmpassword}})
+    
+            const createAccoutButton = screen.getByTestId("createAccountButton")
+            const passwordMatchError = screen.getByTestId("passwordMatchError")
+
+            fireEvent.click(createAccoutButton)
+
+            expect(passwordMatchError).toBeVisible();
+        })
+
+
+    
 })

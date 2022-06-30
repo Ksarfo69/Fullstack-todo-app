@@ -104,12 +104,12 @@ const RegisterPage = (props) => {
         <Wrapper>
             <RegistrationText>TodoApp Registration</RegistrationText>
 
-            {user.registrationError && <RegistrationError>Username or Email already exists</RegistrationError>}
-            {user.registrationSuccess && <RegistrationSuccess>Account Created Successfully</RegistrationSuccess>}
-            {!passwordMatch && <PasswordMatchError>Passwords do not match.</PasswordMatchError>}
-            {emptyPassword && <EmptyPasswordError>Please enter a password</EmptyPasswordError>}
-            {emptyUsername && <EmptyPasswordError>Please enter a username</EmptyPasswordError>}
-            {emptyEmail && <EmptyPasswordError>Please enter a email</EmptyPasswordError>}
+            <RegistrationError style={{display: user.registrationError? "initial" : "none"}}>Username or Email already exists</RegistrationError>
+            <RegistrationSuccess  style={{display: user.registrationSuccess? "initial" : "none"}}>Account Created Successfully</RegistrationSuccess>
+            <PasswordMatchError data-testid="passwordMatchError" style={{display: passwordMatch? "none" : "initial"}}>Passwords do not match.</PasswordMatchError>
+            <EmptyPasswordError data-testid="emptyPasswordError" style={{display: emptyPassword? "initial" : "none"}}>Please enter a password</EmptyPasswordError>
+            <EmptyPasswordError data-testid="emptyUsernameError" style={{display: emptyUsername? "initial" : "none"}}>Please enter a username</EmptyPasswordError>
+            <EmptyPasswordError  data-testid="emptyEmailError" style={{display: emptyEmail? "initial" : "none"}}>Please enter a email</EmptyPasswordError>
 
 
             <UsernameField data-testid="usernamefield" >
@@ -140,8 +140,8 @@ const RegisterPage = (props) => {
                 </ConfirmPasswordInput>
             </ConfirmPasswordField>
 
-            <CreateAccountButton onClick={createAccountHandler}>Create Account</CreateAccountButton>
-            <LoginButton onClick={loginHandler}>Login</LoginButton>
+            <CreateAccountButton data-testid="createAccountButton" onClick={createAccountHandler}>Create Account</CreateAccountButton>
+            <LoginButton data-testid="loginButton" onClick={loginHandler}>Login</LoginButton>
         </Wrapper>
     </Container>
     </div>
