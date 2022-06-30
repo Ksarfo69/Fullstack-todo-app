@@ -59,4 +59,61 @@ describe('Registration Page', ()=> {
     
             expect(confirmpasswordField).toBeInTheDocument()
         })
+
+    it("checks username input value changes", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+    
+            const usernameInput = screen.getByTestId("usernameInput")
+            const testusername = "testname50"
+
+            fireEvent.change(usernameInput, {target: {value: testusername}})
+    
+    
+            expect(usernameInput.value).toBe(testusername)
+        })
+
+    it("checks email input value changes", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+    
+            const emailInput = screen.getByTestId("emailInput")
+            const testemail = "testname50@gmail.com"
+
+            fireEvent.change(emailInput, {target: {value: testemail}})
+    
+            expect(emailInput.value).toBe(testemail)
+        })
+
+    it("checks password input value changes", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+    
+            const passwordInput = screen.getByTestId("passwordInput")
+            const testpassword = "testpassword"
+
+            fireEvent.change(passwordInput, {target: {value: testpassword}})
+    
+            expect(passwordInput.value).toBe(testpassword)
+        })
+
+    it("checks confirmpassword input value changes", ()=>{
+        render(
+            <Provider store={store}>
+                <RegisterPage />
+            </Provider>)
+    
+            const confirmpasswordInput = screen.getByTestId("confirmpasswordInput")
+            const testconfirmpassword = "testpassword"
+
+            fireEvent.change(confirmpasswordInput, {target: {value: testconfirmpassword}})
+    
+            expect(confirmpasswordInput.value).toBe(testconfirmpassword)
+        })
 })

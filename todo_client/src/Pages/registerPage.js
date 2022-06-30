@@ -114,28 +114,28 @@ const RegisterPage = (props) => {
 
             <UsernameField data-testid="usernamefield" >
                 Username:
-                <UsernameInput  onChange={usernameHandler} value={Username}>
+                <UsernameInput data-testid="usernameInput" onChange={usernameHandler} value={Username}>
 
                 </UsernameInput>
             </UsernameField>
             
             <EmailField data-testid="emailfield" >
                 Email:
-                <EmailInput  onChange={emailHandler} value={Email}>
+                <EmailInput  data-testid="emailInput" onChange={emailHandler} value={Email}>
 
                 </EmailInput>
             </EmailField>
             
             <PasswordField data-testid="passwordfield" >
                 Password:
-                <PasswordInput type="password" onChange={passwordHandler} value={Password}>
+                <PasswordInput data-testid="passwordInput" type="password" onChange={passwordHandler} value={Password}>
 
                 </PasswordInput>
             </PasswordField>
 
            <ConfirmPasswordField data-testid="confirmpasswordfield" >
                 Confirm Password:
-                <ConfirmPasswordInput type="password" onChange={confirmPasswordHandler} value={confirmPassword}>
+                <ConfirmPasswordInput data-testid="confirmpasswordInput" type="password" onChange={confirmPasswordHandler} value={confirmPassword}>
 
                 </ConfirmPasswordInput>
             </ConfirmPasswordField>

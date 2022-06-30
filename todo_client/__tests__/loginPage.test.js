@@ -25,6 +25,7 @@ describe('Login Page', ()=>{
         const testValue = "test@gmail.com"
 
         fireEvent.change(emailField, {target : {value : testValue}})
+        expect(emailField.value).toBe(testValue)
 
     })
 
@@ -37,6 +38,7 @@ describe('Login Page', ()=>{
         const testValue = "testpassword"
 
         fireEvent.change(passwordField, {target : {value : testValue}})
+        expect(passwordField.value).toBe(testValue)
 
     })
 
