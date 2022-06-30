@@ -112,28 +112,28 @@ const RegisterPage = (props) => {
             {emptyEmail && <EmptyPasswordError>Please enter a email</EmptyPasswordError>}
 
 
-            <UsernameField >
+            <UsernameField data-testid="usernamefield" >
                 Username:
                 <UsernameInput  onChange={usernameHandler} value={Username}>
 
                 </UsernameInput>
             </UsernameField>
             
-            <EmailField >
+            <EmailField data-testid="emailfield" >
                 Email:
                 <EmailInput  onChange={emailHandler} value={Email}>
 
                 </EmailInput>
             </EmailField>
             
-            <PasswordField >
+            <PasswordField data-testid="passwordfield" >
                 Password:
                 <PasswordInput type="password" onChange={passwordHandler} value={Password}>
 
                 </PasswordInput>
             </PasswordField>
 
-           <ConfirmPasswordField>
+           <ConfirmPasswordField data-testid="confirmpasswordfield" >
                 Confirm Password:
                 <ConfirmPasswordInput type="password" onChange={confirmPasswordHandler} value={confirmPassword}>
 
