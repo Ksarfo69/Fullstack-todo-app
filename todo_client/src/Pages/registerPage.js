@@ -77,7 +77,7 @@ const RegisterPage = (props) => {
         }
         try{
                 setpasswordMatch(true)
-                const res = await axiosInstance.post('/register', userDetailsForRegistration)
+                await axiosInstance.post('/register', userDetailsForRegistration)
                 dispatch(registrationSuccess(userDetailsForRegistration))
                 setUsername("")
                 setEmail("")

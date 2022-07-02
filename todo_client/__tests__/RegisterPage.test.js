@@ -1,12 +1,27 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import '@testing-library/react'
 import RegisterPage from '../src/Pages/registerPage'
 import {configureStore} from '@reduxjs/toolkit';
 import usersSlice from '../src/Redux/usersSlice'
 import { Provider } from 'react-redux';
-import LoginPage from '../src/Pages/loginPage'
+import axios from 'axios'
+import axiosInstance from '../src/Pages/apiConfig'
+
+
+
+
+jest.mock('../src/Pages/apiConfig.js', () => ({
+    __esModule: true,
+  
+    default: {
+      get: () => ({
+        data: { id: 1, name: "John" },
+      }),
+      post: jest.fn(),
+    create: jest.fn()
+  }}));
 
 
 
@@ -217,6 +232,56 @@ describe('Registration Page', ()=> {
             expect(passwordMatchError).toBeVisible();
         })
 
+        it("checks that a call to server is made", async ()=>{
+            render(
+                <Provider store={store}>
+                    <RegisterPage />
+                </Provider>)
+    
+                const usernameInput = screen.getByTestId("usernameInput")
+                const testusername = "testname50"
+    
+                fireEvent.change(usernameInput, {target: {value: testusername}})
+    
+    
+                const emailInput = screen.getByTestId("emailInput")
+                const testemail = "testname50@gmail.com"
+    
+                fireEvent.change(emailInput, {target: {value: testemail}})
+    
+    
+                const passwordInput = screen.getByTestId("passwordInput")
+                const testpassword = "testpassword"
+    
+                fireEvent.change(passwordInput, {target: {value: testpassword}})
+    
+    
+                const confirmpasswordInput = screen.getByTestId("confirmpasswordInput")
+                const testconfirmpassword = "testpassword"
+    
+                fireEvent.change(confirmpasswordInput, {target: {value: testconfirmpassword}})
+        
+                const createAccoutButton = screen.getByTestId("createAccountButton")
+                const passwordMatchError = screen.getByTestId("passwordMatchError")
+                const emptyEmailError = screen.getByTestId("emptyEmailError")
+                const emptyPasswordError = screen.getByTestId("emptyPasswordError")
+                const emptyUsernameError = screen.getByTestId("emptyUsernameError")
+    
+    
+                fireEvent.click(createAccoutButton)
+
+              
+    
+                expect(passwordMatchError).not.toBeVisible();
+                expect(emptyEmailError).not.toBeVisible();
+                expect(emptyPasswordError).not.toBeVisible();
+                expect(emptyUsernameError).not.toBeVisible();
+               await waitFor(()=> expect(usernameInput.value).toBe(""))
+               expect(axiosInstance.post).toHaveBeenCalledTimes(1)
+                
+            })
+            
+
     it("checks registration progresses with all fields filled", ()=>{
         render(
             <Provider store={store}>
@@ -262,4 +327,6 @@ describe('Registration Page', ()=> {
             
         })
     
+
+        
 })
