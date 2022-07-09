@@ -4,7 +4,7 @@ import {Container, Left, LeftText, Right, RightWrapper, LoginText, EmailField, E
 import { useDispatch, useSelector } from 'react-redux'
 import {loginStart, loginSuccess, loginError} from '../Redux/usersSlice'
 import RegisterPage from './registerPage'
-import axios from 'axios'
+
 
 
 const LoginPage = () => {

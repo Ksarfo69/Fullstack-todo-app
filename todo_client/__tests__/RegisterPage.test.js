@@ -6,22 +6,12 @@ import RegisterPage from '../src/Pages/registerPage'
 import {configureStore} from '@reduxjs/toolkit';
 import usersSlice from '../src/Redux/usersSlice'
 import { Provider } from 'react-redux';
-import axios from 'axios'
 import axiosInstance from '../src/Pages/apiConfig'
 
 
 
 
-jest.mock('../src/Pages/apiConfig.js', () => ({
-    __esModule: true,
-  
-    default: {
-      get: () => ({
-        data: { id: 1, name: "John" },
-      }),
-      post: jest.fn(),
-    create: jest.fn()
-  }}));
+jest.mock('../src/Pages/apiConfig.js')
 
 
 
@@ -276,11 +266,11 @@ describe('Registration Page', ()=> {
                 expect(emptyEmailError).not.toBeVisible();
                 expect(emptyPasswordError).not.toBeVisible();
                 expect(emptyUsernameError).not.toBeVisible();
-               await waitFor(()=> expect(usernameInput.value).toBe(""))
-               expect(axiosInstance.post).toHaveBeenCalledTimes(1)
+               await waitFor(()=> expect(axiosInstance.post).toHaveBeenCalledTimes(1))
+               
                 
             })
-            
+
 
     it("checks registration progresses with all fields filled", ()=>{
         render(
@@ -326,7 +316,6 @@ describe('Registration Page', ()=> {
             expect(emptyUsernameError).not.toBeVisible();
             
         })
-    
 
         
 })

@@ -1,35 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656797687625" clover="3.2.0">
-  <project timestamp="1656797687625" name="All files">
-    <metrics statements="71" coveredstatements="54" conditionals="20" coveredconditionals="19" methods="18" coveredmethods="9" elements="109" coveredelements="82" complexity="0" loc="71" ncloc="71" packages="2" files="2" classes="2"/>
+<coverage generated="1657401924727" clover="3.2.0">
+  <project timestamp="1657401924727" name="All files">
+    <metrics statements="149" coveredstatements="112" conditionals="48" coveredconditionals="34" methods="37" coveredmethods="23" elements="234" coveredelements="169" complexity="0" loc="149" ncloc="149" packages="2" files="5" classes="5"/>
     <package name="Pages">
-      <metrics statements="53" coveredstatements="49" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="8"/>
+      <metrics statements="131" coveredstatements="100" conditionals="48" coveredconditionals="34" methods="28" coveredmethods="19"/>
+      <file name="apiConfig.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Pages\apiConfig.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="loginPage.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Pages\loginPage.js">
+        <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="13" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="34" count="13" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="50" count="13" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="54" count="13" type="stmt"/>
+      </file>
       <file name="registerPage.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Pages\registerPage.js">
         <metrics statements="53" coveredstatements="49" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="8"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="56" type="stmt"/>
-        <line num="13" count="55" type="stmt"/>
-        <line num="14" count="55" type="stmt"/>
-        <line num="15" count="55" type="stmt"/>
-        <line num="16" count="55" type="stmt"/>
-        <line num="17" count="55" type="stmt"/>
-        <line num="18" count="55" type="stmt"/>
-        <line num="19" count="55" type="stmt"/>
-        <line num="20" count="55" type="stmt"/>
-        <line num="23" count="55" type="stmt"/>
-        <line num="24" count="14" type="stmt"/>
-        <line num="25" count="14" type="stmt"/>
-        <line num="29" count="55" type="stmt"/>
-        <line num="33" count="55" type="stmt"/>
-        <line num="40" count="55" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="57" type="stmt"/>
+        <line num="13" count="56" type="stmt"/>
+        <line num="14" count="56" type="stmt"/>
+        <line num="15" count="56" type="stmt"/>
+        <line num="16" count="56" type="stmt"/>
+        <line num="17" count="56" type="stmt"/>
+        <line num="18" count="56" type="stmt"/>
+        <line num="19" count="56" type="stmt"/>
+        <line num="20" count="56" type="stmt"/>
+        <line num="23" count="56" type="stmt"/>
+        <line num="24" count="15" type="stmt"/>
+        <line num="25" count="15" type="stmt"/>
+        <line num="29" count="56" type="stmt"/>
+        <line num="33" count="56" type="stmt"/>
+        <line num="40" count="56" type="stmt"/>
         <line num="41" count="4" type="stmt"/>
-        <line num="44" count="55" type="stmt"/>
+        <line num="44" count="56" type="stmt"/>
         <line num="45" count="6" type="stmt"/>
-        <line num="48" count="55" type="stmt"/>
+        <line num="48" count="56" type="stmt"/>
         <line num="49" count="5" type="stmt"/>
-        <line num="52" count="55" type="stmt"/>
+        <line num="52" count="56" type="stmt"/>
         <line num="53" count="4" type="stmt"/>
-        <line num="57" count="55" type="stmt"/>
+        <line num="57" count="56" type="stmt"/>
         <line num="58" count="6" type="stmt"/>
         <line num="60" count="6" type="cond" truecount="2" falsecount="0"/>
         <line num="61" count="1" type="stmt"/>
@@ -54,25 +84,82 @@
         <line num="84" count="2" type="stmt"/>
         <line num="85" count="2" type="stmt"/>
         <line num="89" count="0" type="stmt"/>
-        <line num="94" count="55" type="stmt"/>
+        <line num="94" count="56" type="stmt"/>
         <line num="95" count="0" type="stmt"/>
         <line num="96" count="0" type="stmt"/>
         <line num="97" count="0" type="stmt"/>
-        <line num="101" count="55" type="stmt"/>
+        <line num="101" count="56" type="stmt"/>
+      </file>
+      <file name="todoListPage.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Pages\todoListPage.js">
+        <metrics statements="54" coveredstatements="27" conditionals="20" coveredconditionals="7" methods="13" coveredmethods="5"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="56" count="3" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="73" count="3" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="78" count="3" type="stmt"/>
+        <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="93" count="3" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="101" count="3" type="stmt"/>
+        <line num="125" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="131" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="133" count="0" type="cond" truecount="1" falsecount="1"/>
+        <line num="137" count="0" type="cond" truecount="1" falsecount="1"/>
       </file>
     </package>
     <package name="Redux">
-      <metrics statements="18" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="1"/>
+      <metrics statements="18" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
       <file name="usersSlice.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Redux\usersSlice.js">
-        <metrics statements="18" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <metrics statements="18" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
         <line num="37" count="2" type="stmt"/>
@@ -82,7 +169,7 @@
         <line num="43" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="55" count="3" type="stmt"/>
       </file>
     </package>
   </project>

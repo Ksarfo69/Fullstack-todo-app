@@ -104,7 +104,7 @@ const RegisterPage = (props) => {
         <Wrapper>
             <RegistrationText>TodoApp Registration</RegistrationText>
 
-            <RegistrationError style={{display: user.registrationError? "initial" : "none"}}>Username or Email already exists</RegistrationError>
+            <RegistrationError data-testid="registrationerror" style={{display: user.registrationError? "initial" : "none"}}>Username or Email already exists</RegistrationError>
             <RegistrationSuccess  style={{display: user.registrationSuccess? "initial" : "none"}}>Account Created Successfully</RegistrationSuccess>
             <PasswordMatchError data-testid="passwordMatchError" style={{display: passwordMatch? "none" : "initial"}}>Passwords do not match.</PasswordMatchError>
             <EmptyPasswordError data-testid="emptyPasswordError" style={{display: emptyPassword? "initial" : "none"}}>Please enter a password</EmptyPasswordError>

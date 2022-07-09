@@ -6,6 +6,9 @@ import '@testing-library/jest-dom'
 import LoginPage from '../src/Pages/loginPage';
 import {configureStore} from '@reduxjs/toolkit';
 import usersSlice from '../src/Redux/usersSlice'
+import axiosInstance from '../src/Pages/apiConfig'
+
+jest.mock('../src/Pages/apiConfig.js')
 
 
 
@@ -72,6 +75,7 @@ describe('Login Page', ()=>{
         fireEvent.change(passwordField, {target : {value : testPassword}})
         fireEvent.click(login)
         await waitFor(()=> expect(autherror).toBeVisible());
+        expect(axiosInstance.post).toHaveBeenCalledTimes(1)
 
     })
 
@@ -81,8 +85,13 @@ describe('Login Page', ()=>{
                 <LoginPage />
             </Provider>)
         const createAccount = screen.getByTestId("create-account")
+       
 
         fireEvent.click(createAccount)
+
+        const usernameInput = screen.getByTestId("usernameInput")
+
+        expect(usernameInput).toBeInTheDocument()
 
     })
 
@@ -96,3 +105,4 @@ describe('Login Page', ()=>{
         expect(parent).toBeInTheDocument()
     });
 })
+

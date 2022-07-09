@@ -7,7 +7,6 @@ import {Container, Wrapper, UserActions, UserName, LogoutAction, TodoList, Headi
 TodoText, Status, NotDoneIcon, DoneIcon, Delete, DeleteIcon } from '../styledComponents/todoListPageStyling.js';
 import { useDispatch, useSelector } from 'react-redux'
 import {logout} from '../Redux/usersSlice'
-import {  useNavigate } from 'react-router'
 import axiosInstance from './apiConfig'
 import Spinnerpage from '../Components/DisplayTodoSpinner.js';
 import TodoSpinner from '../Components/AddTodoSpinner.js';
@@ -30,7 +29,6 @@ const TodoListPage = () => {
 
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     
 
@@ -40,12 +38,11 @@ const TodoListPage = () => {
             try {
              const results = await axiosInstance.get(`/getusertodolist/${User.user_id}`);
             setuserTodoList(results.data)
-             
+            setdisplayTodoSpinner(false)
              
             } catch (error) {
               console.log(error)
-            }
-            setdisplayTodoSpinner(false)
+            }  
           }
           
         getAllTodos()
@@ -75,7 +72,7 @@ const TodoListPage = () => {
 
     const logoutHandler = () => {
         dispatch(logout())
-        navigate("/login")
+        window.location = "/login"
     }
 
     const setCompletionHandler = async (todoid) => {
@@ -102,9 +99,9 @@ const TodoListPage = () => {
 
 
   return (
-    <Container>
-        <Wrapper>
-            <UserActions>
+    <Container data-testid="maincontainer">
+        <Wrapper >
+            <UserActions data-testid="useractions">
                 <UserName>
                     Hi, {User.username}   |
                 </UserName>
@@ -112,7 +109,7 @@ const TodoListPage = () => {
                     Logout
                 </LogoutAction>
             </UserActions>
-            <TodoList>
+            <TodoList  data-testid="todolist">
                 <Headings>
                     <TodoHeading>
                         Todos
@@ -124,10 +121,10 @@ const TodoListPage = () => {
                         X
                     </DeleteHeading>
                 </Headings>
-                {displayTodoSpinner? <Spinnerpage/> :userTodoList.map(item => (
-                    <TodoBody>
+                <Spinnerpage style={{display: displayTodoSpinner? "initial" : "none"}}/> {userTodoList.map(item => (
+                    <TodoBody style={{display: displayTodoSpinner? "none" : "initial"}}>
                     <Todo>
-                        <TodoText>{item.todo}</TodoText>
+                        <TodoText data-testid="todotext">{item.todo}</TodoText>
                     </Todo>
                     <Status>
                        {item.todo_status == 1 ?
@@ -141,7 +138,7 @@ const TodoListPage = () => {
                     </Delete>
                 </TodoBody>))}
             </TodoList>
-            <InputSection>
+            <InputSection data-testid="inputsection">
                     <AddTodo onChange={inputHandler} value = {newInput} type="text" placeholder="Add new todo here...">
 
                     </AddTodo>
