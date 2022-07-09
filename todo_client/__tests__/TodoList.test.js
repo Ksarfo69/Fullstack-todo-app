@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/react'
 import '@testing-library/jest-dom'
 import TodoListPage from '../src/Pages/todoListPage';
@@ -21,7 +21,8 @@ jest.mock('../src/Pages/apiConfig.js', () => ({
                 todo: "Go to work on tuesday",
                 todo_status: 0
             }]
-        })
+        }),
+        post: jest.fn()
     },
 }));
 
@@ -31,6 +32,49 @@ describe("todo list page", ()=>{
           users: usersSlice,
         }
       })
+    
+    it('checks that input field value changes', ()=>{
+        store.dispatch(loginSuccess({
+            username: "Kwame",
+            user_id: 1
+        }));
+
+        render(
+            <Provider store={store}>
+                <TodoListPage />
+            </Provider>)
+
+        const inputSection = screen.getByTestId("inputsection");
+        const testInput = "This is a new todo"
+
+        fireEvent.change(inputSection, {target: {value: testInput}})
+
+        expect(inputSection.value).toBe(testInput)
+    })
+
+
+    it('checks that the add button submits input', async ()=>{
+        store.dispatch(loginSuccess({
+            username: "Kwame",
+            user_id: 1
+        }));
+        
+        render(
+            <Provider store={store}>
+                <TodoListPage />
+            </Provider>)
+
+        const inputSection = screen.getByTestId("inputsection");
+        const testInput = "This is a new todo"
+        const addButton = screen.getByTestId("addButton")
+
+        fireEvent.change(inputSection, {target: {value: testInput}})
+        fireEvent.click(addButton)
+
+       await waitFor(()=> expect(inputSection.value).toBe(""))
+    })
+        
+
 
     it('checks that the whole page renders correctly', async ()=>{
         store.dispatch(loginSuccess({

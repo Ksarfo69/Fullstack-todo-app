@@ -58,9 +58,9 @@ const TodoListPage = () => {
             setaddTodoSpinner(true)
             const res = await axiosInstance.post(`/new/todo/${User.user_id}`, {"todo": newInput})
             setaddTodoSpinner(false)
+            setnewInput("")
+            setreloaderForAddTodoButton(!reloaderForAddTodoButton)
         }
-        setnewInput("")
-        setreloaderForAddTodoButton(!reloaderForAddTodoButton)
     }
 
 
@@ -128,9 +128,9 @@ const TodoListPage = () => {
                     </Todo>
                     <Status>
                        {item.todo_status == 1 ?
-                        <DoneIcon onClick={()=>setCompletionHandler(item.todo_id)}>{completionStatusSpinner? <StatusSpinner/> : <CheckCircleOutlineOutlinedIcon/>}</DoneIcon>
+                        <DoneIcon onClick={()=>setCompletionHandler(item.todo_id)} data-testid="completionclicker">{completionStatusSpinner? <StatusSpinner/> : <CheckCircleOutlineOutlinedIcon data-testid="complete"/>}</DoneIcon>
                          :
-                        <NotDoneIcon onClick={()=>setCompletionHandler(item.todo_id)}>{completionStatusSpinner? <StatusSpinner/> :  <DoNotDisturbOnOutlinedIcon />}</NotDoneIcon>
+                        <NotDoneIcon onClick={()=>setCompletionHandler(item.todo_id)} data-testid="notcompleteclicker">{completionStatusSpinner? <StatusSpinner/> :  <DoNotDisturbOnOutlinedIcon data-testid="notcomplete"/>}</NotDoneIcon>
                         }
                     </Status>
                     <Delete>
@@ -138,12 +138,12 @@ const TodoListPage = () => {
                     </Delete>
                 </TodoBody>))}
             </TodoList>
-            <InputSection data-testid="inputsection">
-                    <AddTodo onChange={inputHandler} value = {newInput} type="text" placeholder="Add new todo here...">
+            <InputSection >
+                    <AddTodo data-testid="inputsection" onChange={inputHandler} value = {newInput} type="text" placeholder="Add new todo here...">
 
                     </AddTodo>
                     <AddIcon>
-                        {addTodoSpinner? <TodoSpinner/> :<AddCircleOutlineOutlinedIcon onClick={addButtonHandler}/>}
+                        {addTodoSpinner? <TodoSpinner/> :<AddCircleOutlineOutlinedIcon data-testid="addButton" onClick={addButtonHandler}/>}
                     </AddIcon>
                 </InputSection>
         </Wrapper>
