@@ -27,15 +27,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watch",
+    "test": "jest",
     "open:coverage": "start ./coverage/lcov-report/index.html",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint": "eslint ./src"
   },
   "browserslist": {
     "production": [
@@ -54,6 +49,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@playwright/test": "^1.23.2",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^28.1.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "jest": "^28.1.1",

@@ -1,0 +1,9 @@
+{
+   
+    "extends":"react-app",
+    "rules": {
+      "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+      "eqeqeq": "off",
+      "react-hooks/exhaustive-deps": "off"
+  }
+  }

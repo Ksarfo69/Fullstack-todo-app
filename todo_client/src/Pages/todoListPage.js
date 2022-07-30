@@ -56,7 +56,7 @@ const TodoListPage = () => {
     const addButtonHandler = async() => {
         if(newInput!=""){
             setaddTodoSpinner(true)
-            const res = await axiosInstance.post(`/new/todo/${User.user_id}`, {"todo": newInput})
+            await axiosInstance.post(`/new/todo/${User.user_id}`, {"todo": newInput})
             setaddTodoSpinner(false)
             setnewInput("")
             setreloaderForAddTodoButton(!reloaderForAddTodoButton)
@@ -79,20 +79,20 @@ const TodoListPage = () => {
         if(editCompletionStatus == 0){
             seteditCompletionStatus(1)
             setcompletionStatusSpinner(true)
-            const res = await axiosInstance.put(`/edit/${todoid}`, {"todo_status": editCompletionStatus})
+            await axiosInstance.put(`/edit/${todoid}`, {"todo_status": editCompletionStatus})
             setcompletionStatusSpinner(false)
         }
         if(editCompletionStatus == 1){
             seteditCompletionStatus(0)
             setcompletionStatusSpinner(true)
-            const res = await axiosInstance.put(`/edit/${todoid}`, {"todo_status": editCompletionStatus})
+           await axiosInstance.put(`/edit/${todoid}`, {"todo_status": editCompletionStatus})
             setcompletionStatusSpinner(false)
         }    
     }
 
     const deleteHandler = async(todoid) => {
         setdeleteTodoSpinner(true)
-        const res = await axiosInstance.delete(`/delete/todo/${todoid}`)
+        await axiosInstance.delete(`/delete/todo/${todoid}`)
         setdeleteTodo(!deleteTodo)
         setdeleteTodoSpinner(false)
     }

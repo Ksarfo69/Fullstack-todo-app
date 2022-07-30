@@ -33,7 +33,7 @@ const usersSlice = createSlice({
         registrationStart: (state) => {
             state.registrationPending = true
         },
-        registrationSuccess: (state, action) => {
+        registrationSuccess: (state) => {
             state.registrationPending = false;
             state.registrationSuccess = true;
             state.registrationError = false
