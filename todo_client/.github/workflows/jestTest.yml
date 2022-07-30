@@ -6,7 +6,7 @@ on:
 
 jobs: 
   lintTest:
-    name: Lint                   
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Clone the Repository
