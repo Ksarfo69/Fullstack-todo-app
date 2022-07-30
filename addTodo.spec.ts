@@ -2,8 +2,6 @@ import { test, expect } from '@playwright/test';
 
 test('User is able to create an account and add todo', async ({ page }) => {
 
-  // Go to https://ama-cake-web.herokuapp.com/
-  await page.goto('https://ama-cake-web.herokuapp.com/');
 
   // Go to http://the-todoapp.herokuapp.com/
   await page.goto('http://the-todoapp.herokuapp.com/');
@@ -70,8 +68,9 @@ test('User is able to create an account and add todo', async ({ page }) => {
   await page.locator('[placeholder="Add new todo here\\.\\.\\."]').fill('This is a new todo for the test user');
 
   // Click path
-  await page.locator('path').click();
+  await page.locator('data-test-id=AddCircleOutlineOutlinedIcon').click();
 
+  
   // Click [data-testid="DoNotDisturbOnOutlinedIcon"]
   await page.locator('[data-testid="DoNotDisturbOnOutlinedIcon"]').click();
 

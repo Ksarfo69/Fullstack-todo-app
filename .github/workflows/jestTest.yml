@@ -33,7 +33,7 @@ jobs:
           echo "Installing the dependencies"
           cd todo_client
           npm install --legacy-peer-deps
-      -name: "Install Playwright"
+      -name: Install Playwright
         run: |
           npx playwright install --with-deps
       - name: Run Jest Tests

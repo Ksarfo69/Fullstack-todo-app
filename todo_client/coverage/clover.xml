@@ -1,10 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657484999757" clover="3.2.0">
-  <project timestamp="1657484999824" name="All files">
-    <metrics statements="72" coveredstatements="46" conditionals="20" coveredconditionals="9" methods="22" coveredmethods="11" elements="114" coveredelements="66" complexity="0" loc="72" ncloc="72" packages="2" files="2" classes="2"/>
+<coverage generated="1659171807197" clover="3.2.0">
+  <project timestamp="1659171807198" name="All files">
+    <metrics statements="221" coveredstatements="191" conditionals="48" coveredconditionals="36" methods="43" coveredmethods="31" elements="312" coveredelements="258" complexity="0" loc="221" ncloc="221" packages="5" files="13" classes="13"/>
+    <package name="Components">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="AddTodoSpinner.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Components\AddTodoSpinner.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+      </file>
+      <file name="DeleteSpinner.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Components\DeleteSpinner.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+      <file name="DisplayTodoSpinner.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Components\DisplayTodoSpinner.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="12" type="stmt"/>
+      </file>
+      <file name="StatusSpinner.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Components\StatusSpinner.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="Pages">
-      <metrics statements="54" coveredstatements="34" conditionals="20" coveredconditionals="9" methods="13" coveredmethods="7"/>
-      <file name="todoListPage.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Pages\todoListPage.js">
+      <metrics statements="131" coveredstatements="107" conditionals="48" coveredconditionals="36" methods="28" coveredmethods="21"/>
+      <file name="apiConfig.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Pages\apiConfig.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="loginPage.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Pages\loginPage.js">
+        <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="6"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="15" type="stmt"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="13" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="34" count="13" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="50" count="13" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="54" count="13" type="stmt"/>
+      </file>
+      <file name="registerPage.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Pages\registerPage.js">
+        <metrics statements="53" coveredstatements="49" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="8"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="57" type="stmt"/>
+        <line num="13" count="56" type="stmt"/>
+        <line num="14" count="56" type="stmt"/>
+        <line num="15" count="56" type="stmt"/>
+        <line num="16" count="56" type="stmt"/>
+        <line num="17" count="56" type="stmt"/>
+        <line num="18" count="56" type="stmt"/>
+        <line num="19" count="56" type="stmt"/>
+        <line num="20" count="56" type="stmt"/>
+        <line num="23" count="56" type="stmt"/>
+        <line num="24" count="15" type="stmt"/>
+        <line num="25" count="15" type="stmt"/>
+        <line num="29" count="56" type="stmt"/>
+        <line num="33" count="56" type="stmt"/>
+        <line num="40" count="56" type="stmt"/>
+        <line num="41" count="4" type="stmt"/>
+        <line num="44" count="56" type="stmt"/>
+        <line num="45" count="6" type="stmt"/>
+        <line num="48" count="56" type="stmt"/>
+        <line num="49" count="5" type="stmt"/>
+        <line num="52" count="56" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="57" count="56" type="stmt"/>
+        <line num="58" count="6" type="stmt"/>
+        <line num="60" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="67" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="72" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="94" count="56" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="101" count="56" type="stmt"/>
+      </file>
+      <file name="todoListPage.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Pages\todoListPage.js">
         <metrics statements="54" coveredstatements="34" conditionals="20" coveredconditionals="9" methods="13" coveredmethods="7"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="12" type="stmt"/>
@@ -64,7 +177,7 @@
     </package>
     <package name="Redux">
       <metrics statements="18" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
-      <file name="usersSlice.js" path="C:\Users\Kwame\Desktop\React Projects\New Todo\Fullstack-todo-app\todo_client\src\Redux\usersSlice.js">
+      <file name="usersSlice.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Redux\usersSlice.js">
         <metrics statements="18" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
         <line num="4" count="3" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
@@ -84,6 +197,84 @@
         <line num="46" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
         <line num="55" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="Responsive">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Responsive.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\Responsive\Responsive.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="34" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="styledComponents">
+      <metrics statements="56" coveredstatements="56" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="loginPageStyling.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\styledComponents\loginPageStyling.js">
+        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="111" count="1" type="stmt"/>
+        <line num="117" count="1" type="stmt"/>
+      </file>
+      <file name="registerPageStyling.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\styledComponents\registerPageStyling.js">
+        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="96" count="2" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
+        <line num="108" count="2" type="stmt"/>
+        <line num="114" count="2" type="stmt"/>
+      </file>
+      <file name="todoListPageStyling.js" path="C:\Users\Kwame Sarfo\Desktop\Code\Fullstack-todo-app\todo_client\src\styledComponents\todoListPageStyling.js">
+        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="123" count="1" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="139" count="1" type="stmt"/>
+        <line num="145" count="1" type="stmt"/>
+        <line num="155" count="1" type="stmt"/>
+        <line num="160" count="1" type="stmt"/>
+        <line num="166" count="1" type="stmt"/>
+        <line num="176" count="1" type="stmt"/>
       </file>
     </package>
   </project>
