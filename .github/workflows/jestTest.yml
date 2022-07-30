@@ -14,10 +14,12 @@ jobs:
       - name: Install the Dependencies
         run: |
           echo "Installing the dependencies"
+          cd todo_client
           npm install --legacy-peer-deps
       - name: Run Eslint
         run: |
           echo "Running eslint"
+          cd todo_client
           npm run lint 
         env:
           CI: true
@@ -29,10 +31,12 @@ jobs:
       - name: Install the Dependencies
         run: |
           echo "Installing the dependencies"
+          cd todo_client
           npm install --legacy-peer-deps
       - name: Run Jest Tests
         run: |
           echo "Running Jest Tests"
+          cd todo_client
           npm run test
         env:
           CI: true
